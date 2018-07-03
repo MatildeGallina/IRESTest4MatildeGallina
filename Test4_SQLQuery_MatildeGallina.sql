@@ -40,6 +40,9 @@ group by p.Id, d.Name, p.Name, e.Name
 -- - Impiegato femmina che ha lavorato meno ore a giugno, e quante ore ha fatto
 -- (sono 2 query separate!)
 
+-- queseta query è per l'employee maschio con più ore di lavoro
+-- non è completa perche non filtra anche in base al mese di nascita
+
 select e.Name, t.MaxHours
 from (select MAX(h.Quantity) as MaxHours
                 from Hours as h, Employees as e
